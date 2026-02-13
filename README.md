@@ -1,3 +1,4 @@
+
 # Indian Heritage Explore - Static Website
 
 A beginner-friendly, content-rich static website showcasing India's rich cultural heritage, monuments, temples, and traditions.
