@@ -1,0 +1,208 @@
+# IMAGE FOLDER SETUP GUIDE
+
+## 📸 Adding Images to Your Website
+
+This website is designed to be image-rich. All images should be placed in the `images/` folder.
+
+### Required Images
+
+Below is the complete list of image filenames referenced in the website. You can download free, high-quality images from:
+- **Unsplash**: https://unsplash.com/
+- **Pexels**: https://pexels.com/
+- **Pixabay**: https://pixabay.com/
+
+### 🌟 HERO CAROUSEL IMAGES (PRIORITY - 7 Images)
+
+These are the main full-screen images that appear on the home page hero carousel:
+
+1. **taj-mahal.jpg** - Taj Mahal (Full view, preferably during golden hour)
+2. **red-fort.jpg** - Red Fort Delhi (Main structure view)
+3. **kashi.jpg** - Kashi Vishwanath Temple (Temple view or Ganga ghat)
+4. **golden-temple-hero.jpg** - Golden Temple Amritsar (Preferably with reflection)
+5. **meenakshi-hero.jpg** - Meenakshi Temple Madurai (Colorful gopuram towers)
+6. **hampi-hero.jpg** - Hampi ruins (Ancient stone chariot or temple complex)
+7. **india-gate-hero.jpg** - India Gate Delhi (Monument view, preferably evening)
+
+**Image Specs for Hero Carousel:**
+- **Resolution**: 1920x1080px minimum (Full HD landscape)
+- **Aspect Ratio**: 16:9 (widescreen)
+- **Format**: JPG
+- **File Size**: 300-800KB (compress for web)
+- **Quality**: High quality, sharp, well-lit photos
+- **Orientation**: Horizontal/Landscape ONLY
+
+**Tips for Hero Images:**
+- Choose dramatic, inspiring photos
+- Good lighting (golden hour preferred)
+- Clear subject with some background
+- Avoid cluttered or busy backgrounds
+- Higher resolution is better (will be scaled down)
+
+### Image List by Page
+
+#### HOME PAGE (index.html)
+- india-map.jpg - Map of India showing heritage locations
+- qutub-minar.jpg - Qutub Minar
+- red-fort.jpg - Red Fort Delhi
+- konark-temple.jpg - Konark Sun Temple
+- festival.jpg - Indian festival celebration
+- rani-ki-vav.jpg - Rani ki Vav stepwell
+- chettinad.jpg - Chettinad mansion
+- unakoti.jpg - Unakoti rock carvings
+- mawsynram.jpg - Living root bridges
+- ancient-india.jpg - Ancient civilization
+- temple-architecture.jpg - Temple architecture
+- traditional-crafts.jpg - Traditional Indian crafts
+
+#### HERITAGE SITES PAGE (heritage-sites.html)
+- taj-mahal-detail.jpg
+- hampi-ruins.jpg
+- ajanta-caves-detail.jpg
+- ellora-caves.jpg
+- khajuraho.jpg
+- konark-detail.jpg
+- mahabalipuram.jpg
+- fatehpur-sikri.jpg
+- qutub-complex.jpg
+- kaziranga.jpg - Kaziranga National Park
+- sundarbans.jpg - Sundarbans
+- western-ghats.jpg - Western Ghats
+- great-himalayan.jpg - Great Himalayan National Park
+
+#### MONUMENTS PAGE (monuments.html)
+- red-fort-delhi.jpg
+- agra-fort.jpg
+- humayun-tomb.jpg
+- jama-masjid.jpg
+- buland-darwaza.jpg
+- itmad-ud-daulah.jpg
+- amber-fort.jpg
+- mehrangarh-fort.jpg
+- city-palace-udaipur.jpg
+- hawa-mahal.jpg
+- chittorgarh-fort.jpg
+- kumbhalgarh-fort.jpg
+- ranthambore-fort.jpg
+- gol-gumbaz.jpg
+- thanjavur-palace.jpg
+- mysore-palace.jpg
+
+#### TEMPLES PAGE (temples.html)
+- meenakshi-temple.jpg
+- brihadeeswarar.jpg
+- tirupati-temple.jpg
+- ramanathaswamy.jpg
+- kanchipuram-temple.jpg
+- padmanabhaswamy.jpg
+- khajuraho-temples.jpg
+- jagannath-temple.jpg
+- lingaraja-temple.jpg
+- somnath-temple.jpg
+- golden-temple.jpg
+- dilwara-temples.jpg
+- ranakpur-temple.jpg
+- lotus-temple.jpg
+- mahabodhi-temple.jpg
+- akshardham-temple.jpg
+
+#### CULTURE PAGE (culture.html)
+- diwali.jpg - Diwali celebration
+- holi.jpg - Holi festival
+- durga-puja.jpg - Durga Puja
+- eid.jpg - Eid celebration
+- pongal.jpg - Pongal festival
+- navratri.jpg - Navratri/Garba
+- bharatanatyam.jpg - Bharatanatyam dance
+- kathak.jpg - Kathak dance
+- odissi.jpg - Odissi dance
+- kathakali.jpg - Kathakali dance
+- madhubani-painting.jpg - Madhubani art
+- warli-art.jpg - Warli painting
+- pattachitra.jpg - Pattachitra painting
+- saree.jpg - Traditional saree
+- salwar-kameez.jpg - Salwar kameez
+- dhoti-kurta.jpg - Dhoti and kurta
+- mekhela-chador.jpg - Assamese dress
+
+#### GALLERY PAGE (gallery.html)
+- taj-mahal-night.jpg
+- ajanta-painting.jpg
+- hampi-chariot.jpg
+- ellora-kailasa.jpg
+- victoria-memorial.jpg
+- gateway-of-india.jpg
+- charminar.jpg
+- india-gate.jpg
+- golden-temple-reflection.jpg
+- meenakshi-gopuram.jpg
+- konark-wheel.jpg
+- kedarnath-temple.jpg
+- kathak-performance.jpg
+- rangoli-design.jpg
+- traditional-wedding.jpg
+- kumbh-mela.jpg
+- khajuraho-sculpture.jpg
+- nahargarh-fort.jpg
+- vaishno-devi.jpg
+- garba-dance.jpg
+
+#### ABOUT PAGE (about.html)
+- about-heritage.jpg - General Indian heritage image
+
+### Image Specifications
+
+**Recommended Sizes:**
+- Hero images: 1920x1080px (landscape)
+- Carousel images: 1200x600px (landscape)
+- Card images: 800x600px
+- Gallery images: 800x600px
+- General content images: 600x400px
+
+**Format:**
+- JPG or JPEG (preferred for photos)
+- PNG (for images requiring transparency)
+- Max file size: 500KB per image (compress if needed)
+
+### Quick Setup Steps
+
+1. Create the `images` folder in your project root
+2. Download images from free stock photo sites
+3. Rename them to match the filenames above
+4. Place them in the `images` folder
+5. Refresh your website to see the images
+
+### Search Keywords for Stock Photos
+
+Use these search terms on Unsplash/Pexels:
+- "Taj Mahal"
+- "Indian temple"
+- "Indian monuments"
+- "Indian festival"
+- "Diwali celebration"
+- "Indian classical dance"
+- "Indian heritage"
+- "Red Fort Delhi"
+- "Golden Temple Amritsar"
+- "Hampi ruins"
+- "Indian architecture"
+- "Rajasthan fort"
+- "South Indian temple"
+
+### Optional: Placeholder Images
+
+While setting up, you can use placeholder services:
+- `https://via.placeholder.com/800x600?text=Image+Name`
+- Replace image paths temporarily with placeholder URLs
+
+### Copyright Note
+
+Always ensure you have the right to use images:
+- ✅ Free stock photos (Unsplash, Pexels, Pixabay)
+- ✅ Creative Commons licensed images
+- ✅ Your own photographs
+- ❌ Copyrighted images without permission
+
+---
+
+**Need Help?**
+If you have questions about images, refer to the About page or README.md file.

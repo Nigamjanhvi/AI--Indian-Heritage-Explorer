@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Heritage Explore - Discover India's Rich Cultural Legacy</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+     <!-- Custom JS -->
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">Incredible India</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="heritage-sites.html">Heritage Sites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="monuments.html">Monuments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="temples.html">Temples</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="culture.html">Culture & Traditions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel Section -->
+    <section class="hero-carousel-section">
+<div id="heroCarousel" class="carousel slide" data-bs-ride="false">
+
+            <!-- Carousel Inner -->
+            <div class="carousel-inner">
+                <!-- Slide 1: Taj Mahal -->
+                <div class="carousel-item active">
+                    <img src="Images/tm2.jpg" class="d-block w-100" alt="Taj Mahal">
+                    <div class="carousel-caption">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Taj Mahal</h1>
+                            <p class="hero-subtitle">The Monument of Eternal Love</p>
+                            <p class="hero-description">Built by Emperor Shah Jahan in memory of his beloved wife Mumtaz Mahal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Red Fort -->
+                <div class="carousel-item">
+                    <img src="Images/rf.jpg" class="d-block w-100" alt="Red Fort Delhi">
+                    <div class="carousel-caption">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Red Fort, Delhi</h1>
+                            <p class="hero-subtitle">Symbol of India's Independence</p>
+                            <p class="hero-description">A UNESCO World Heritage Site and historic fortress in Old Delhi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Kashi Vishwanath Temple -->
+                <div class="carousel-item">
+                    <img src="Images/ganga.jpg" class="d-block w-100" alt="Kashi Vishwanath Temple">
+                    <div class="carousel-caption">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Kashi Vishwanath Temple</h1>
+                            <p class="hero-subtitle">The Spiritual Heart of India</p>
+                            <p class="hero-description">One of the most sacred temples in Hinduism on the banks of the holy Ganges</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Golden Temple -->
+                <div class="carousel-item">
+                    <img src="Images/gt.jpg" class="d-block w-100" alt="Golden Temple Amritsar">
+                    <div class="carousel-caption">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Golden Temple, Amritsar</h1>
+                            <p class="hero-subtitle">The Holiest Shrine of Sikhism</p>
+                            <p class="hero-description">Harmandir Sahib welcomes millions of pilgrims with free community meals daily</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5: Meenakshi Temple -->
+                <div class="carousel-item">
+                    <img src="Images/m.jpg" class="d-block w-100" alt="Meenakshi Temple Madurai">
+                    <div class="carousel-caption">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Meenakshi Temple, Madurai</h1>
+                            <p class="hero-subtitle">Architectural Marvel of South India</p>
+                            <p class="hero-description">Stunning temple complex with colorful gopurams and intricate sculptures</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6: Hampi -->
+                <div class="carousel-item">
+                    <img src="Images/hampi.jpg" class="d-block w-100" alt="Hampi Ruins">
+                    <div class="carousel-caption">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Hampi, Karnataka</h1>
+                            <p class="hero-subtitle">Ancient City of Ruins</p>
+                            <p class="hero-description">UNESCO World Heritage Site showcasing the Vijayanagara Empire</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 7: India Gate -->
+                <div class="carousel-item">
+                    <img src="Images/ig.jpg" class="d-block w-100" alt="India Gate Delhi">
+                    <div class="carousel-caption">
+                        <div class="hero-content">
+                            <h1 class="hero-title">India Gate, New Delhi</h1>
+                            <p class="hero-subtitle">Memorial of Valor</p>
+                            <p class="hero-description">War memorial dedicated to 82,000 soldiers of the Indian Army</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </section>
+
+    <div class="hero-scroll-cta">
+        <a href="#explore" class="btn hero-explore-btn">Explore Incredible India</a>
+    </div>
+
+    <!-- Introduction Section -->
+    <section id="explore" class="intro-section intro-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 intro-image-panel" aria-hidden="true">
+                </div>
+                <div class="col-lg-6 intro-content">
+    <h2 class="section-title">India: A Land of Heritage</h2>
+
+    <p class="lead">
+        India is one of the world’s oldest civilizations, with a history that goes back thousands of years. 
+        Its heritage can be seen in ancient temples, historic monuments, and traditional ways of life.
+    </p>
+
+    <p>
+        From the Himalayas in the north to the coastal regions in the south, every part of India has a unique 
+        culture and identity. Different languages, festivals, and customs reflect the diversity of the country.
+    </p>
+
+    <ul class="intro-list">
+        <li><strong>Heritage Sites</strong> – Places that preserve India’s historical and cultural past</li>
+        <li><strong>Monuments</strong> – Forts, palaces, and structures built by past dynasties</li>
+        <li><strong>Temples</strong> – Sacred places representing India’s spiritual traditions</li>
+        <li><strong>Culture & Traditions</strong> – Festivals, art forms, and daily practices followed by people</li>
+    </ul>
+
+    <p>
+        Together, these elements form the rich heritage of India, making it a country known for its history, 
+        culture, and traditions across the world.
+    </p>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heritage Sites Cards Section -->
+   <!-- Hidden Heritage Section -->
+<section class="hidden-heritage py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-4">Hidden Heritage of India</h2>
+        <p class="text-center mb-5">
+            <strong>From Kashmir to Kanyakumari, every Indian state holds a heritage treasure that deserves recognition.</strong>
+        </p>
+
+        <!-- VISIBLE STATES -->
+        <div class="row g-4">
+
+            <!-- Jammu & Kashmir -->
+            <div class="col-md-6">
+                <div class="card heritage-card h-100">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Images/jk.jpg" class="img-fluid h-100 object-fit-cover" alt="Martand Sun Temple">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Martand Sun Temple, Jammu & Kashmir</h5>
+                                <p class="card-text">
+                                   Built in the 8th century, the Martand Sun Temple once stood as one of the grandest sun temples in India.
+    It was designed so that sunlight illuminated the sanctum throughout the day, reflecting advanced
+    astronomical knowledge of ancient Kashmir. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Himachal Pradesh -->
+            <div class="col-md-6">
+                <div class="card heritage-card h-100">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Images\Kangra-Fort-himachal.jpg" class="img-fluid h-100 object-fit-cover" alt="Kangra Fort">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Kangra Fort, Himachal Pradesh</h5>
+                                <p class="card-text">
+                                    Kangra Fort is believed to be over 3,500 years old, making it one of the oldest forts in India.
+    It has been mentioned in ancient texts and has witnessed invasions from Alexander’s era to the British rule.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Punjab -->
+            <div class="col-md-6">
+                <div class="card heritage-card h-100">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Images/sh.jpg" class="img-fluid h-100 object-fit-cover" alt="Sheesh Mahal Patiala">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Sheesh Mahal, Punjab</h5>
+                                <p class="card-text">
+                                    The Sheesh Mahal of Patiala is famous for its intricate mirror work and rare miniature paintings.
+    Once used by Punjabi royalty, the palace reflects how art, music, and luxury flourished in princely Punjab.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rajasthan -->
+            <div class="col-md-6">
+                <div class="card heritage-card h-100">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Images/cb.jpg" class="img-fluid h-100 object-fit-cover" alt="Chand Baori">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Chand Baori, Rajasthan</h5>
+                                <p class="card-text">
+                                   Chand Baori is one of the deepest stepwells in the world, with over 3,500 perfectly symmetrical steps.
+    Built more than 1,000 years ago, it was designed to store water and keep the surroundings cool in extreme heat.
+</p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gujarat -->
+            <div class="col-md-6">
+                <div class="card heritage-card h-100">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Images/dh.jpg" class="img-fluid h-100 object-fit-cover" alt="Dholavira">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Dholavira, Gujarat</h5>
+                                <p class="card-text">
+                                    Dholavira was a highly planned city of the Indus Valley Civilization, featuring reservoirs,
+    drainage systems, and water conservation methods that still impress modern engineers today.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Madhya Pradesh -->
+            <div class="col-md-6">
+                <div class="card heritage-card h-100">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Images/bb.jpg" class="img-fluid h-100 object-fit-cover" alt="Bhimbetka">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Bhimbetka, Madhya Pradesh</h5>
+                                <p class="card-text">
+                                     The cave paintings at Bhimbetka are over 30,000 years old and show early humans hunting,
+    dancing, and living together—making it one of the oldest known art galleries in the world.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Odisha -->
+            <div class="col-md-6">
+                <div class="card heritage-card h-100">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Images/rg.jpg" class="img-fluid h-100 object-fit-cover" alt="Ratnagiri">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Ratnagiri, Odisha</h5>
+                                <p class="card-text">
+                                  Ratnagiri was once a major center of Buddhist learning, attracting monks from across Asia.
+    Excavations have revealed monasteries, stupas, and sculptures that highlight Odisha’s forgotten Buddhist past.  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assam -->
+            <div class="col-md-6">
+                <div class="card heritage-card h-100">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Images/mj.jpg" class="img-fluid h-100 object-fit-cover" alt="Majuli">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Majuli, Assam</h5>
+                                <p class="card-text">
+                                  Majuli is the world’s largest river island and a living cultural heritage site.
+    It is home to ancient monasteries, traditional mask-making, and a peaceful way of life shaped by the Brahmaputra.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Karnataka -->
+            <div class="col-md-6">
+                <div class="card heritage-card h-100">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Images/pp.jpg" class="img-fluid h-100 object-fit-cover" alt="Pattadakal">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Pattadakal, Karnataka</h5>
+                                <p class="card-text">
+                                     Pattadakal is the only place in India where North and South Indian temple styles exist together.
+    It was the ceremonial site where Chalukya kings were crowned, symbolizing architectural unity.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tamil Nadu -->
+            <div class="col-md-6">
+                <div class="card heritage-card h-100">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Images/tg.jpg" class="img-fluid h-100 object-fit-cover" alt="Tharangambadi">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Tharangambadi, Tamil Nadu</h5>
+                                <p class="card-text">
+                                   Tharangambadi was once a Danish colony, making it one of the few places in India with European fort architecture.
+    The coastal town tells a rare story of cultural exchange between India and Europe.
+</p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        
+
+    </div>
+</section>
+
+
+    <!-- Image and Text Section -->
+    <section class="image-text-section py-5 bg-light">
+        <div class="container">
+            <!-- First Row: Image Left -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="Images/an.jpg" alt="Ancient Indian Civilization" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">Ancient Civilizations of India</h2>
+                    <p>India is home to one of the world's oldest civilizations. The Indus Valley Civilization, dating back to 3300 BCE, was one of the three early cradles of civilization along with Mesopotamia and Ancient Egypt.</p>
+                    <p>The cities of Harappa and Mohenjo-daro showcased advanced urban planning with:</p>
+                    <ul>
+                        <li>Well-planned street grids and drainage systems</li>
+                        <li>Advanced architecture with burnt brick buildings</li>
+                        <li>Public baths and granaries</li>
+                        <li>Standardized weights and measures</li>
+                        <li>Evidence of trade with Mesopotamia</li>
+                    </ul>
+                    <p>This ancient heritage laid the foundation for the rich cultural tapestry that India represents today.</p>
+                </div>
+            </div>
+
+            <!-- Second Row: Image Right -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                    <img src="Images/gg.jpg"  class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <h2 class="section-title">Sacred Rivers of India</h2>
+                    <p>
+        Rivers have played a vital role in shaping India’s civilization for thousands of years.
+        Many ancient cities, temples, and communities developed along riverbanks.
+    </p>
+
+    <p>
+        The <strong>Ganga</strong> is one of the holiest rivers in India and is deeply connected
+        with faith, rituals, and everyday life in northern regions.
+    </p>
+
+   
+    <p>
+        The <strong>Narmada</strong> is one of the few rivers in India that flows westward.
+        It is considered sacred, and many devotees perform the <em>Narmada Parikrama</em>,
+        a spiritual journey that involves walking along the river’s entire length.
+    </p>
+
+    <p>
+        In southern India, rivers such as the <strong>Kaveri</strong> and <strong>Godavari</strong>
+        support agriculture and are celebrated through regional festivals and traditions.
+    </p>
+
+    <p>
+        These rivers are not just sources of water but living symbols of India’s cultural,
+        spiritual, and historical heritage.</p>
+                </div>
+            </div>
+
+            <!-- Third Row: Image Left -->
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="Images/art.jpg" alt="Traditional Indian Crafts" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">Traditional Arts and Crafts</h2>
+                    <p>India has a rich tradition of handicrafts that have been passed down through generations. Each state has its unique craft forms:</p>
+                    <ul>
+                        <li><strong>Kashmir:</strong> Pashmina shawls, papier-mâché items, and walnut wood carving</li>
+                        <li><strong>Rajasthan:</strong> Blue pottery, miniature paintings, block printing, and marble inlay work</li>
+                        <li><strong>West Bengal:</strong> Terracotta pottery, Kantha embroidery, and Dokra metal casting</li>
+                        <li><strong>Karnataka:</strong> Mysore silk, sandalwood carving, and Bidriware</li>
+                        <li><strong>Tamil Nadu:</strong> Tanjore paintings, bronze sculptures, and Kanchipuram silk sarees</li>
+                    </ul>
+                    <p>These traditional crafts not only represent India's artistic heritage but also provide livelihood to millions of artisans across the country.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section py-5">
+        <div class="container text-center">
+            <h2 class="section-title text-white mb-4">Start Your Heritage Journey Today</h2>
+            <p class="text-white mb-4 lead">Explore detailed information about India's magnificent heritage sites, monuments, temples, and cultural traditions. Each page is filled with interesting facts, historical context, and beautiful imagery.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-3 mb-3">
+                    <a href="heritage-sites.html" class="btn btn-light btn-lg w-100">Heritage Sites</a>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <a href="monuments.html" class="btn btn-light btn-lg w-100">Monuments</a>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <a href="temples.html" class="btn btn-light btn-lg w-100">Temples</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5>Indian Heritage Explore</h5>
+                    <p>A educational website dedicated to showcasing India's rich cultural heritage, monuments, temples, and traditions.</p>
+                </div>
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50">Home</a></li>
+                        <li><a href="heritage-sites.html" class="text-white-50">Heritage Sites</a></li>
+                        <li><a href="monuments.html" class="text-white-50">Monuments</a></li>
+                        <li><a href="temples.html" class="text-white-50">Temples</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>More Info</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="culture.html" class="text-white-50">Culture & Traditions</a></li>
+                        <li><a href="about.html" class="text-white-50">About This Website</a></li>
+                        <li><a href="contact.html" class="text-white-50">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2026 Indian Heritage Explore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+  
+</body>
+</html>

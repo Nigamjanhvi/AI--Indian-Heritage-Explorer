@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Indian Heritage Explore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="contact-page">
+    <!-- Navigation -->
+     <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="Images/logo.png" alt="Logo" class="navbar-logo">
+                <span class="brand-text">Incredible India</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="heritage-sites.html">Heritage Sites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="monuments.html">Monuments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="temples.html">Temples</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="culture.html">Culture & Traditions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+   
+    <!-- Contact Form Section -->
+    <section class="py-5 contact-content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title text-center mb-4">Send Us Your Feedback</h2>
+                    <p class="text-center mb-5">Have questions about Indian heritage? Want to share your experiences? Or just want to say hello? Please fill out the form below and we'll get back to you as soon as possible.</p>
+                    
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number (Optional)</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <label for="subject" class="form-label">Subject *</label>
+                                    <select class="form-select" id="subject" name="subject" required>
+                                        <option value="">Choose a subject...</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="feedback">Website Feedback</option>
+                                        <option value="suggestion">Content Suggestion</option>
+                                        <option value="collaboration">Collaboration</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Your Message *</label>
+                                <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
+                                <label class="form-check-label" for="newsletter">
+                                    I would like to receive updates about Indian heritage and culture
+                                </label>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-custom btn-lg px-5">Send Message</button>
+                            </div>
+                            
+                            <div id="formMessage" class="mt-3" style="display: none;"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-5 contact-content-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Get In Touch</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="info-box text-center h-100">
+                        <h4>Email Us</h4>
+                        <p>For general inquiries and feedback</p>
+                        <p><strong>info@indianheritage.edu</strong></p>
+                        <p><strong>heritage@example.com</strong></p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="info-box text-center h-100">
+                        <h4>Visit Us</h4>
+                        <p>Heritage Studies Department</p>
+                        <p><strong>123 Culture Street</strong></p>
+                        <p><strong>New Delhi - 110001</strong></p>
+                        <p><strong>India</strong></p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="info-box text-center h-100">
+                        <h4>Follow Us</h4>
+                        <p>Stay connected on social media</p>
+                        <p><strong>Facebook</strong> | <strong>Twitter</strong></p>
+                        <p><strong>Instagram</strong> | <strong>YouTube</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 contact-content-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Frequently Asked Questions</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What is the purpose of this website?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    This website is an educational project created to promote awareness about India's rich cultural heritage, monuments, temples, and traditions. It aims to provide comprehensive information about India's UNESCO World Heritage Sites, historical monuments, sacred temples, and diverse cultural practices.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Can I use the information for my school/college project?
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, you can use the information provided on this website for educational purposes. However, we recommend cross-referencing with other sources and citing this website appropriately in your references. The content is meant to be a starting point for learning about Indian heritage.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    How often is the content updated?
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We strive to keep the content current and accurate. Major updates are made quarterly to include new UNESCO inscriptions, important events, and user feedback. If you notice any outdated information, please use the contact form to let us know.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Can I suggest content for the website?
+                                </button>
+                            </h3>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely! We welcome suggestions for new content, lesser-known heritage sites, cultural practices, or any corrections. Please use the contact form above with "Content Suggestion" as the subject, and we'll review your submission.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    Where are the images from?
+                                </button>
+                            </h3>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The images used on this website are placeholders representing the various heritage sites, monuments, and cultural elements. In a live production website, these would be replaced with high-quality photographs from free stock photo websites like Unsplash, Pexels, or Pixabay, or original photographs with proper attribution.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5>Indian Heritage Explore</h5>
+                    <p>A educational website dedicated to showcasing India's rich cultural heritage, monuments, temples, and traditions.</p>
+                    <p class="mb-0"><small>Created as a college project to promote awareness about Indian heritage.</small></p>
+                </div>
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50">Home</a></li>
+                        <li><a href="heritage-sites.html" class="text-white-50">Heritage Sites</a></li>
+                        <li><a href="monuments.html" class="text-white-50">Monuments</a></li>
+                        <li><a href="temples.html" class="text-white-50">Temples</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>More Info</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="culture.html" class="text-white-50">Culture & Traditions</a></li>
+                        <li><a href="about.html" class="text-white-50">About This Website</a></li>
+                        <li><a href="contact.html" class="text-white-50">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2026 Indian Heritage Explore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
