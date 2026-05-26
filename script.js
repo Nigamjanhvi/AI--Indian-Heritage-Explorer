@@ -75,14 +75,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
+            const newsletter = document.getElementById('newsletter').checked;
             
             // Basic validation
             if (name.trim() === '' || email.trim() === '' || subject === '' || message.trim() === '') {
@@ -97,14 +99,39 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // If validation passes
-            showMessage('Thank you for your message! We will get back to you soon.', 'success');
-            
-            // Reset form
-            contactForm.reset();
-            
-            // In a real website, here you would send the data to a server
-            // using fetch() or XMLHttpRequest
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton ? submitButton.textContent : '';
+
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+            }
+
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email, phone, subject, message, newsletter })
+                });
+
+                const result = await response.json();
+
+                if (!response.ok || !result.ok) {
+                    throw new Error(result.message || 'Unable to send message right now.');
+                }
+
+                showMessage(result.message, 'success');
+                contactForm.reset();
+            } catch (error) {
+                showMessage(error.message || 'Unable to send message right now. Please try again.', 'danger');
+            } finally {
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                }
+            }
         });
     }
 });

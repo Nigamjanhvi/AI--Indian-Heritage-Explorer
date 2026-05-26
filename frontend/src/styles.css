@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#f8f3ea] text-slate-950 antialiased dark:bg-slate-950 dark:text-slate-100;
+  font-family: Poppins, Inter, system-ui, sans-serif;
+}
+
+.glass {
+  @apply border border-white/30 bg-white/80 shadow-xl shadow-slate-900/5 backdrop-blur dark:border-white/10 dark:bg-slate-900/80;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-md bg-saffron px-4 py-2 font-semibold text-white shadow-sm transition hover:bg-orange-600 disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-md border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-800 transition hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800;
+}
+
+.input {
+  @apply w-full rounded-md border border-slate-200 bg-white px-3 py-2 outline-none ring-saffron/30 transition focus:ring-4 dark:border-slate-700 dark:bg-slate-900;
+}
+
+.card {
+  @apply rounded-lg border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900;
+}
+
+.hero-text {
+  text-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.heritage-home {
+  --heritage-gold: #d5a642;
+}
+
+.heritage-parallax {
+  animation: heritageDrift 22s ease-in-out infinite alternate;
+}
+
+.heritage-home ::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+.heritage-home ::-webkit-scrollbar-track {
+  background: rgba(213, 166, 66, 0.16);
+}
+
+.heritage-home ::-webkit-scrollbar-thumb {
+  background: rgba(213, 166, 66, 0.7);
+  border-radius: 999px;
+}
+
+@keyframes heritageDrift {
+  from {
+    transform: scale(1.04) translateY(0);
+  }
+  to {
+    transform: scale(1.1) translateY(-18px);
+  }
+}
+
+.masonry {
+  columns: 1;
+  column-gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .masonry {
+    columns: 3;
+  }
+}
+
+.masonry > * {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}

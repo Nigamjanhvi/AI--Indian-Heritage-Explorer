@@ -1,237 +1,133 @@
+# Indian Heritage Explorer
 
-# Indian Heritage Explore - Static Website
+A premium production-ready AI-powered tourism platform for exploring Indian heritage, culture, monuments, temples, UNESCO sites, state routes, saved collections and AI-generated itineraries.
 
-A beginner-friendly, content-rich static website showcasing India's rich cultural heritage, monuments, temples, and traditions.
+## Tech Stack
 
-## 📋 Project Overview
+- Frontend: React, Tailwind CSS, Framer Motion, React Router, Axios, React Query, Leaflet, Recharts
+- Backend: Node.js, Express.js
+- Database: MongoDB Atlas with Mongoose
+- Authentication: JWT
+- AI: Gemini API
+- DevOps: Docker, Docker Compose, Jenkins, GitHub Actions, Nginx
+- Deployment Target: AWS EC2
 
-This is an educational website created as a college project to promote awareness about Indian heritage. The website features:
-- 8 fully responsive HTML pages
-- Clean, traditional Indian color scheme
-- Content-heavy with detailed information
-- Image-rich presentation
-- Simple, beginner-friendly code
+## Folder Structure
 
-## 🎯 Website Features
-
-### Pages
-1. **Home (index.html)** - Hero section, carousel, introduction, content cards
-2. **Heritage Sites (heritage-sites.html)** - UNESCO World Heritage Sites
-3. **Monuments (monuments.html)** - Forts, palaces, and historical monuments
-4. **Temples (temples.html)** - Sacred temples of different faiths
-5. **Culture & Traditions (culture.html)** - Festivals, dance, music, crafts
-6. **Gallery (gallery.html)** - Image gallery with category filters
-7. **Contact (contact.html)** - Feedback form and FAQ
-8. **About (about.html)** - Project information
-
-## 🛠️ Technologies Used
-
-- **HTML5** - Semantic markup
-- **CSS3** - Custom styling and animations
-- **Bootstrap 5.3.2** - Responsive grid and components
-- **JavaScript** - Form validation, gallery filtering, smooth scrolling
-- **Google Fonts** - Crimson Text & Lora fonts
-
-## 📁 File Structure
-
-```
-indian-heritage-explore/
-│
-├── index.html                 # Home page
-├── heritage-sites.html        # Heritage sites page
-├── monuments.html             # Monuments page
-├── temples.html               # Temples page
-├── culture.html               # Culture & traditions page
-├── gallery.html               # Gallery page
-├── contact.html               # Contact page
-├── about.html                 # About page
-│
-├── css/
-│   └── style.css             # Custom CSS styles
-│
-├── js/
-│   └── script.js             # JavaScript functionality
-│
-├── images/                    # Image folder (placeholder references)
-│   └── (Add your images here)
-│
-└── README.md                  # This file
+```text
+backend/
+  src/
+    config/
+    controllers/
+    middleware/
+    models/
+    routes/
+    utils/
+frontend/
+  src/
+    api/
+    components/
+    context/
+    pages/
+    data/
+docker/
+jenkins/
+nginx/
+docs/
+.github/workflows/
 ```
 
-## 🚀 Getting Started
+## Core Features
 
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- A text editor (VS Code, Sublime Text, Notepad++)
-- Basic understanding of HTML, CSS, and JavaScript
+- Register, login, logout and JWT protected routes
+- Cinematic landing page with video background, hero search, voice search, recent and trending searches
+- Mega navigation for Explore, UNESCO, States, Culture, Map, AI Planner and Dashboard
+- Heritage site CRUD with image upload
+- Search by name, state, category and UNESCO status
+- Favorites and travel collections
+- Reviews with ratings
+- Trip planner with saved itineraries
+- Gemini recommendations, 3-day/5-day/7-day itineraries and floating-style chatbot page
+- Leaflet-based map explorer
+- State guide pages, UNESCO grid/timeline/gallery, culture timeline
+- Admin dashboard with totals and charts
+- Responsive luxury tourism UI with dark mode, glassmorphism, animated cards and search suggestions
 
-### Installation
+## API Routes
 
-1. **Download or Clone the Project**
-   - Download the ZIP file and extract it
-   - Or clone the repository
+```text
+POST /api/auth/register
+POST /api/auth/login
 
-2. **Add Images**
-   - Create an `images` folder in the root directory
-   - Add your heritage images with the filenames referenced in the HTML
-   - You can use free images from:
-     - [Unsplash](https://unsplash.com/)
-     - [Pexels](https://pexels.com/)
-     - [Pixabay](https://pixabay.com/)
+GET  /api/users/profile
+PUT  /api/users/profile
+GET  /api/users/admin/stats
 
-3. **Open the Website**
-   - Simply open `index.html` in your web browser
-   - No server setup required (static website)
+GET    /api/sites/getall
+GET    /api/sites/getbyid/:id
+POST   /api/sites/create
+PUT    /api/sites/update/:id
+DELETE /api/sites/delete/:id
 
-## 🎨 Color Scheme
+POST   /api/reviews
+PUT    /api/reviews/:id
+DELETE /api/reviews/:id
 
-The website uses traditional Indian colors:
-- **Primary Saffron**: #FF9933
-- **Light Saffron**: #FFB366
-- **Soft Green**: #138808
-- **Light Green**: #2FA84F
-- **Beige**: #F5E6D3
-- **Off-white**: #FAF7F2
+GET    /api/favorites
+POST   /api/favorites
+DELETE /api/favorites/:siteId
 
-## 📸 Image Requirements
+GET    /api/trips
+POST   /api/trips
+PUT    /api/trips/:id
+DELETE /api/trips/:id
 
-The website references the following image files (add to `images/` folder):
-
-### Home Page
-- hero-bg.jpg
-- taj-mahal.jpg
-- hampi-temple.jpg
-- cultural-dance.jpg
-- ajanta-caves.jpg
-- india-map.jpg
-- And more...
-
-*Note: All image paths are already set in the HTML. Simply add images with matching filenames.*
-
-## ✨ Features
-
-### Interactive Elements
-- **Responsive Navigation** - Collapses on mobile devices
-- **Image Carousel** - Auto-rotating slideshow on home page
-- **Gallery Filters** - Click to filter by category
-- **Contact Form** - Client-side validation
-- **Smooth Scrolling** - Smooth anchor link navigation
-- **Scroll Animations** - Cards fade in on scroll
-- **Hover Effects** - Interactive card hover states
-
-### Responsive Design
-- Mobile-first approach
-- Works on all screen sizes
-- Bootstrap grid system
-- Flexible images
-
-## 🔧 Customization Guide
-
-### Changing Colors
-Edit the CSS variables in `css/style.css`:
-```css
-:root {
-    --primary-saffron: #FF9933;
-    --soft-green: #138808;
-    /* etc. */
-}
+POST /api/ai/recommend
+POST /api/ai/chat
 ```
 
-### Adding New Content
-1. Open the relevant HTML file
-2. Find the section you want to edit
-3. Copy an existing card/section
-4. Modify the content and image path
+## Environment Setup
 
-### Modifying Fonts
-Change the Google Fonts import in the `<head>` section:
-```html
-<link href="https://fonts.googleapis.com/css2?family=YourFont&display=swap" rel="stylesheet">
+Backend:
+
+```bash
+cp backend/.env.example backend/.env
 ```
 
-## 📱 Browser Compatibility
+Frontend:
 
-- ✅ Chrome (latest)
-- ✅ Firefox (latest)
-- ✅ Safari (latest)
-- ✅ Edge (latest)
-- ✅ Mobile browsers
+```bash
+cp frontend/.env.example frontend/.env
+```
 
-## 📝 JavaScript Functionality
+Fill MongoDB Atlas, JWT and Gemini values in `backend/.env`.
 
-The `script.js` file includes:
-- Gallery filtering system
-- Contact form validation
-- Smooth scrolling
-- Scroll-triggered animations
-- Navbar scroll effects
-- Active page highlighting
+## Run Locally
 
-## 🎓 Learning Resources
+Backend:
 
-This project is perfect for learning:
-- HTML semantic structure
-- CSS Flexbox and Grid
-- Bootstrap framework basics
-- JavaScript DOM manipulation
-- Form validation
-- Responsive web design
+```bash
+cd backend
+npm install
+npm run dev
+```
 
-## 🤝 Contributing
+Frontend:
 
-This is an educational project. Feel free to:
-- Add more heritage sites
-- Improve content
-- Fix bugs
-- Enhance styling
-- Add new features
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-## 📄 License
+## Run With Docker
 
-This project is created for educational purposes. Feel free to use and modify for your own learning projects.
+```bash
+docker compose up --build
+```
 
-## 👏 Credits
+Open `http://localhost`.
 
-### Content Sources
-- UNESCO World Heritage Centre
-- Archaeological Survey of India
-- Ministry of Culture, Government of India
-- Various historical research materials
+## Deployment
 
-### Technologies
-- Bootstrap Framework
-- Google Fonts
-- Modern web standards
-
-## 📞 Support
-
-For questions or issues:
-1. Review the code comments
-2. Check the About page
-3. Use the Contact form
-
-## 🎯 Future Enhancements
-
-Potential improvements:
-- [ ] Search functionality
-- [ ] Interactive maps
-- [ ] Video content
-- [ ] Virtual tours
-- [ ] Backend integration
-- [ ] Multi-language support
-- [ ] Dark mode
-- [ ] Print-friendly CSS
-
-## 📊 Project Stats
-
-- **Total Pages**: 8
-- **Lines of CSS**: ~500
-- **Lines of JavaScript**: ~150
-- **Bootstrap Components Used**: Navbar, Cards, Carousel, Accordion, Forms, Grid
-- **Responsive Breakpoints**: Mobile, Tablet, Desktop
-
----
-
-**Created with ❤️ for preserving and promoting Indian Heritage**
-
-*This is a beginner-level educational project demonstrating HTML, CSS, Bootstrap, and JavaScript skills.*
+See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
