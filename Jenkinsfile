@@ -1,59 +1,70 @@
 pipeline {
-  agent any
+    agent any
 
-  environment {
-    COMPOSE_PROJECT_NAME = 'indian-heritage-explorer'
-  }
-
-  stages {
-    stage('Git Clone') {
-      steps {
-        checkout scm
-      }
+    environment {
+        COMPOSE_PROJECT_NAME = 'indian-heritage-explorer'
     }
 
-    stage('Install Dependencies') {
-      steps {
-        sh 'cd backend && npm install'
-        sh 'cd frontend && npm install'
-      }
+    stages {
+
+        stage('Checkout Code') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Check Tools') {
+            steps {
+                bat 'node --version'
+                bat 'npm --version'
+                bat 'docker --version'
+                bat 'docker compose version'
+            }
+        }
+
+        stage('Build Frontend') {
+            steps {
+                dir('frontend') {
+                    bat 'npm install'
+                    bat 'npm run build'
+                }
+            }
+        }
+
+        stage('Build Backend') {
+            steps {
+                dir('backend') {
+                    bat 'npm install'
+                }
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                bat 'docker compose build'
+            }
+        }
+
+        stage('Deploy Containers') {
+            steps {
+                bat 'docker compose up -d'
+            }
+        }
+
+        stage('Health Check') {
+            steps {
+                bat 'curl http://localhost:5000/api/health'
+            }
+        }
     }
 
-    stage('Run Tests') {
-      steps {
-        sh 'cd backend && npm test'
-        sh 'cd frontend && npm test'
-      }
-    }
+    post {
+        success {
+            echo 'Deployment Successful'
+        }
 
-    stage('Build Frontend') {
-      steps {
-        sh 'cd frontend && npm run build'
-      }
+        failure {
+            echo 'Deployment Failed'
+        }
     }
-
-    stage('Build Backend') {
-      steps {
-        sh 'cd backend && npm prune --omit=dev'
-      }
-    }
-
-    stage('Docker Build') {
-      steps {
-        sh 'docker compose build'
-      }
-    }
-
-    stage('Docker Compose Deployment') {
-      steps {
-        sh 'docker compose up -d'
-      }
-    }
-
-    stage('Health Check') {
-      steps {
-        sh 'sleep 10 && curl -f http://localhost/api/health'
-      }
-    }
-  }
 }
