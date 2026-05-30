@@ -8,23 +8,43 @@ function authPayload(user) {
   };
 }
 
-export async function register(req, res) {
-  const { name, email, password, interests = [] } = req.body;
-  if (!name || !email || !password) return res.status(400).json({ message: 'Name, email and password are required' });
+export async function register(req, res, next) {
+  try {
+    const { name, email, password, interests = [] } = req.body;
+    if (!name || !email || !password) {
+      res.status(400);
+      throw new Error('Name, email and password are required');
+    }
 
-  const exists = await User.findOne({ email });
-  if (exists) return res.status(409).json({ message: 'Email already registered' });
+    const exists = await User.findOne({ email });
+    if (exists) {
+      res.status(409);
+      throw new Error('Email already registered');
+    }
 
-  const user = await User.create({ name, email, password, interests });
-  res.status(201).json(authPayload(user));
+    const user = await User.create({ name, email, password, interests });
+    res.status(201).json(authPayload(user));
+  } catch (error) {
+    next(error);
+  }
 }
 
-export async function login(req, res) {
-  const { email, password } = req.body;
-  const user = await User.findOne({ email }).select('+password');
-  if (!user || !(await user.comparePassword(password))) {
-    return res.status(401).json({ message: 'Invalid email or password' });
-  }
+export async function login(req, res, next) {
+  try {
+    const { email, password } = req.body;
+    if (!email || !password) {
+      res.status(400);
+      throw new Error('Email and password are required');
+    }
 
-  res.json(authPayload(user));
+    const user = await User.findOne({ email }).select('+password');
+    if (!user || !(await user.comparePassword(password))) {
+      res.status(401);
+      throw new Error('Invalid email or password');
+    }
+
+    res.json(authPayload(user));
+  } catch (error) {
+    next(error);
+  }
 }

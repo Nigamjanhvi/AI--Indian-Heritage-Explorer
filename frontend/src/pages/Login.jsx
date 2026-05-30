@@ -14,7 +14,7 @@ export default function Login() {
     e.preventDefault();
     try {
       await login(form.email, form.password);
-      navigate('/admin');
+      navigate('/');
     } catch (err) {
       setError(err.response?.data?.message || 'Login failed');
     }

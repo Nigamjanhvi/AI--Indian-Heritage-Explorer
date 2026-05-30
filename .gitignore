@@ -13,7 +13,7 @@ backend/node_modules/
 backend/uploads/
 
 # Backend data
-data/
+/data/
 
 # Environment
 .env

@@ -1,33 +1,77 @@
-name: CI
+name: Indian Heritage Explorer CI/CD
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
-  build-test:
+  ci:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Install backend
-        run: npm install
-        working-directory: backend
-      - name: Install frontend
-        run: npm install
-        working-directory: frontend
-      - name: Test backend
-        run: npm test
-        working-directory: backend
-      - name: Test frontend
-        run: npm test
-        working-directory: frontend
+
+      - name: Cache frontend dependencies
+        uses: actions/cache@v4
+        with:
+          path: frontend/node_modules
+          key: ${{ runner.os }}-frontend-${{ hashFiles('frontend/package-lock.json', 'frontend/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-frontend-
+
+      - name: Cache backend dependencies
+        uses: actions/cache@v4
+        with:
+          path: backend/node_modules
+          key: ${{ runner.os }}-backend-${{ hashFiles('backend/package-lock.json', 'backend/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-backend-
+
+      - name: Install frontend dependencies
+        run: |
+          cd frontend
+          npm install
+
       - name: Build frontend
-        run: npm run build
-        working-directory: frontend
-      - name: Docker build
+        run: |
+          cd frontend
+          npm run build
+
+      - name: Install backend dependencies
+        run: |
+          cd backend
+          npm install
+
+      - name: Run backend smoke test
+        run: |
+          cd backend
+          npm test
+
+      - name: Prepare Docker environment
+        run: |
+          if [ -f backend/.env.example ]; then cp backend/.env.example backend/.env; fi
+
+      - name: Build Docker Compose services
         run: docker compose build
+
+      - name: Start Docker Compose services
+        run: |
+          docker compose up -d
+          sleep 10
+
+      - name: Verify API health
+        run: curl --fail http://localhost:5000/api/health
+
+      - name: Shutdown Docker Compose services
+        if: always()
+        run: docker compose down

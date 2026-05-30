@@ -21,7 +21,7 @@ export default function Register() {
   async function submit() {
     try {
       await register(form);
-      navigate('/admin');
+      navigate('/');
     } catch (err) {
       setError(err.response?.data?.message || 'Registration failed');
     }

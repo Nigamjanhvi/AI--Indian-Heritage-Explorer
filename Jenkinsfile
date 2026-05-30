@@ -22,6 +22,16 @@ pipeline {
             }
         }
 
+        stage('Prepare Environment') {
+            steps {
+                script {
+                    if (!fileExists('backend/.env')) {
+                        bat 'copy backend\\.env.example backend\\.env'
+                    }
+                }
+            }
+        }
+
         stage('Build Frontend') {
             steps {
                 dir('frontend') {
@@ -35,6 +45,14 @@ pipeline {
             steps {
                 dir('backend') {
                     bat 'npm install'
+                }
+            }
+        }
+
+        stage('Run Backend Smoke Test') {
+            steps {
+                dir('backend') {
+                    bat 'npm test'
                 }
             }
         }
@@ -53,7 +71,7 @@ pipeline {
 
         stage('Health Check') {
             steps {
-                bat 'curl http://localhost:5000/api/health'
+                bat 'curl --fail http://localhost:5000/api/health'
             }
         }
     }
@@ -65,6 +83,10 @@ pipeline {
 
         failure {
             echo 'Deployment Failed'
+        }
+
+        always {
+            bat 'docker compose down'
         }
     }
 }
