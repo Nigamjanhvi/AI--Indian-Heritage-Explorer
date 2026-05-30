@@ -1,5 +1,7 @@
 # Indian Heritage Explorer
 
+![GitHub Actions CI](https://github.com/Nigamjanhvi/Indian-Heritage-Explorer/actions/workflows/ci.yml/badge.svg)
+
 A premium production-ready AI-powered tourism platform for exploring Indian heritage, culture, monuments, temples, UNESCO sites, state routes, saved collections and AI-generated itineraries.
 
 ## Tech Stack
@@ -119,6 +121,14 @@ cd frontend
 npm install
 npm run dev
 ```
+
+## CI/CD Demo
+
+- GitHub Actions workflow configured in `.github/workflows/ci.yml`
+- Jenkins pipeline configured in `Jenkinsfile`
+- Workflow runs on `push` and `pull_request` to `main`
+- Includes frontend build, backend install, smoke test, Docker Compose build, service startup, and health check
+- Adds cleanup logic so services are removed after the run
 
 ## Run With Docker
 
